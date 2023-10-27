@@ -28,7 +28,7 @@ case ${cfn_node_type} in
     
     ;;
 esac
-git config --global --add safe.directory /home/rocky/aws-parallelcluster-monitoring/prometheus-slurm-exporter
+git config --global --add safe.directory ${monitoring_home}/prometheus-slurm-exporter
 #Execute the monitoring installation script
 bash -x "${monitoring_home}/parallelcluster-setup/${setup_command}" >/tmp/monitoring-setup.log 2>&1
 exit $?
